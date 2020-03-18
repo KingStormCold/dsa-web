@@ -1,0 +1,251 @@
+econtract-configurations:
+  queue-log: spring-boot-log-api-test
+  sftp-server:
+    host: 10.0.6.5
+    port: 22
+    user-name: cpadmin
+    password: '{cipher}AgBfUMbEhyxmc0LUIyCPTgNxIc+BDCQoB8pRDCg4nsoKiHBDlWGOFofM2ovFpIw+quI8WLA50JVbFs3Utl7FqI+SJoCU0yWk58F4WwaRdTayIl3FQQgZgBAkyCXmcebCa1jPQ8TLC0fVYFBJvCAGHi+9K2t3Jl0o3tlefEe8cV3pSsWRhF9kT+1qXp7IRD8dclnXXG9NekGS4hc6+l14wdiyLqrPilTD6WMjWS+2SGfNs5OYwxMFxgJQjXyHa4ziFhOQfOY+Erij+Y19t2h2OHJz47jRnQ2KqjTUg2pMMxTLLNQqmnF2dbT11+ssiYryACqHwiQ+swx7ywFZpLpIsgR6Ny6hLYMhCSm80BCXpGG8IfmYHE1tRQc6nq+SJpWFfFEzb7mKXN8/lxQ7FFhAqoE/cOEXiaZrVT8LV6mhAM1Hpx6JqePYlJ9y+P77+2XBwmEvTdR4f6vv6xwOOY6lyCVFS5kooHbmY2Y6jePATzG05ZxOWZ2+PcJSlB/+mjhgOVvrYbCJEisn0Rkq8uH3JTMEsMDt5n1FNYmtYqvLCzVN0OcuPMfAJqPdAMbMn88T33qMOxuGhzwoK+MHu53VKQBKy97LUSMEaIUn5r91x2fk4hr7fNPS+Zofo8/S/NZ5tkqgGc0moG44RZ+wvZLXD+6u5ilm7UcgD6IjPFryF0YeLQAiEJVbfw2C5QvxgBlG3Krf3Wi0HDrlwuzY6CmsLREb'
+    working-dir: /sftp_data/NON_PROD/collection/
+    zalo-contract-dir: /sftp_data/NON_PROD/collection/Viettel2/uploads/easycredit/
+  third-party-api-info:
+    fpt-partner-info:
+        esign-api-info:
+            services-url: https://52.3.52.247/eSignCloud/Services?wsdl
+            pass-code: 12345678
+            agreement-uuid: 202002191154
+            relying-party: EC
+            relying-party-user: e_credit
+            relying-party-password: w28h6737
+            relying-party-signature: M6tvfxwsnKTkxNxH/9vmKrdOZRiYNipn4Q3nlj8bTvmJsJuldpj89ZZS1T8/ZVhm7DD71VqcDiITea9eQHxjPoMGxNynP+NjwVIlLr+S448iMmtYOK+saZonebrGB8o/gtky5ggP28R9PVSo6xICJWqIbW/QW86IJQYGPjpMDRFkEbC2L7UrLVjys6TnHCr/QE4HlHgUvb7fvuiisIXnIUjZYGH0Wewt2SzafEsGJ9aZGm++ILuZfe69ytEup4emDdFnzgzeaY21UCKzXGeau+VBtpqzgrxlHWlawYKZibvfSYKDazV4KGkblzd0zTNEcl1XBXRV4ryIiesReUX83A==
+            relying-party-key-store: E:/Project/doc_api/external doc/FPT/E-Sign/FPTeSignEasyCredit.20200219/FPTeSignEasyCredit/file/ec.p12
+            relying-party-key-store-password: hkB6R3F8
+  internal-api-info:
+    sms-api-info:
+      service-id: MS-SMS-TEST
+      access-token-url: https://apidev.int.easycredit.vn:8095/api/uaa/oauth/token
+      client-id: client_api
+      client-secret: '{cipher}AgBtllMKRA1gSC4banGYNrCrQHtAGdxUy5QuAanpc2v2p37esW1Jfhbxg4IIJQ+VVmR+fIj+MlUhhohCH3bccMkI/yxfwekuDpvISLI3v/xYXmEkCC8w9TBSEpJuipmRxh2Un2WsIdvJbO8mqz80ibJfMqbHQkybJPqdKzGqMLx3jiwkrRdBtySVEIGldx1g93BS5kkZYLA7e2Up1lg6GB4LW3fsrq3spBzhPY4ZWuZP4GKSi/mzOJ1Qb4hF7ciKKroHWYlzp+mAR5OrFge1sbddPwpFg0x5eQjT5GWT6uoNuhGdni5639rSIkinmbsehtOlHyNcHCFkF+GAVI8ZB3n+CEWudvjae4r5QO3iLedNuZP+3clj3qaY26V1SVbYRrQ9uaJE1szDiXxhrN9/2F0tE8rVrMer8THYB5FNnjRUHw+3JMs8KtDUlHE4CIHyA8J7d8NLBP7Ywy1fknhPRiPQlFM2S1JXfkmC7MXIRakiY/MIQjOHFaZ3TFi4kNs/rkiItPq4eXU6aVN3DPn8Imsb/yn5UQl+Bdzf+NxrGGDaItB6GOW2Y+vYJRKaPilEEfSRZFeLxahr6MGGZYBJKpuXCYB5l//BcW6Zz4Q14OoBwWDdnvrrb8KrysGLGuQdAor4n73Lwvw7s7qeBCw1ue+ccuFdoTkd9zIoNZUNguynTb0S+RmDQWnL/tA30Ayr9efCJqtkqIXvZ6lwsSELupKI'
+      grant-type: client_credentials
+      send-sms-url: https://apidev.int.easycredit.vn:8095/api/smsServices/v1/sendMessages
+      content-sms: "Easy Credit OTP {OTP} la ma so ky hop dong dien tu cua Quy Khach."
+      time-out: 50
+    doc-api-info:
+      service-id: MS-DOC-TEST
+      access-token-url: https://apidev.int.easycredit.vn:8095/api/uaa/oauth/token
+      client-id: client_api
+      client-secret: '{cipher}AgBtllMKRA1gSC4banGYNrCrQHtAGdxUy5QuAanpc2v2p37esW1Jfhbxg4IIJQ+VVmR+fIj+MlUhhohCH3bccMkI/yxfwekuDpvISLI3v/xYXmEkCC8w9TBSEpJuipmRxh2Un2WsIdvJbO8mqz80ibJfMqbHQkybJPqdKzGqMLx3jiwkrRdBtySVEIGldx1g93BS5kkZYLA7e2Up1lg6GB4LW3fsrq3spBzhPY4ZWuZP4GKSi/mzOJ1Qb4hF7ciKKroHWYlzp+mAR5OrFge1sbddPwpFg0x5eQjT5GWT6uoNuhGdni5639rSIkinmbsehtOlHyNcHCFkF+GAVI8ZB3n+CEWudvjae4r5QO3iLedNuZP+3clj3qaY26V1SVbYRrQ9uaJE1szDiXxhrN9/2F0tE8rVrMer8THYB5FNnjRUHw+3JMs8KtDUlHE4CIHyA8J7d8NLBP7Ywy1fknhPRiPQlFM2S1JXfkmC7MXIRakiY/MIQjOHFaZ3TFi4kNs/rkiItPq4eXU6aVN3DPn8Imsb/yn5UQl+Bdzf+NxrGGDaItB6GOW2Y+vYJRKaPilEEfSRZFeLxahr6MGGZYBJKpuXCYB5l//BcW6Zz4Q14OoBwWDdnvrrb8KrysGLGuQdAor4n73Lwvw7s7qeBCw1ue+ccuFdoTkd9zIoNZUNguynTb0S+RmDQWnL/tA30Ayr9efCJqtkqIXvZ6lwsSELupKI'
+      grant-type: client_credentials
+      doc-api-url: https://apidev.int.easycredit.vn:8095/api/collectingServices/v1/approved/contract/detail
+      time-out: 50
+
+endpoints:
+  actuator:
+    sensitive: false
+  shutdown:
+    enabled: true
+    sensitive: true
+  restart:
+    enabled: true
+    sensitive: true
+  refresh:
+    enabled: true
+    sensitive: true
+
+#oauth2
+security:
+  oauth2:
+    client:
+      client-id: clientapp
+      client-secret: 123456
+    resource:
+      token-info-uri: https://apidev.int.easycredit.vn:9000/oauth/check_token
+      id: econtract-dev
+
+eureka:
+  client:
+    serviceUrl:
+      #defaultZone: https://admin:admin@apidev.int.easycredit.vn:8761/eureka/
+      defaultZone: https://admin:admin@apidev.int.easycredit.vn:8761/eureka/
+  instance:
+    hostname: sslserver
+    secure-port-enabled: true
+    non-secure-port-enabled: false
+    secure-port: ${server.port}
+      
+      
+#https
+javax:
+  net:
+    ssl:
+      trust-store: file:///Program Files/Java/jdk1.8.0_151/jre/lib/security/cacerts
+      trust-store-password: changeit
+      
+spring:
+  application:
+    name: ms-econtract-dev
+  datasource:
+    driverClassName: org.postgresql.Driver
+    url: jdbc:postgresql://10.0.27.26:5432/test_dev?zeroDateTimeBehavior=convertToNull&characterEncoding=utf8
+    #url: jdbc:postgresql://10.0.27.47:5432/logapi_preprod?zeroDateTimeBehavior=convertToNull&characterEncoding=utf8
+    username: test_dev
+    password: 123456
+
+    initialize: false
+    # connection pool(default)
+    max-active: 10
+    max-idle: 8
+    min-idle: 8
+    initial-size: 10
+    test-on-borrow: true
+    validation-query: SELECT 1
+    remove-abandoned: true
+    remove-abandoned-timeout: 60
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: false
+    generate-ddl: false
+    hibernate:
+      naming-strategy: org.hibernate.cfg.EJB3NamingStrategy
+#      ddl-auto: create
+      ddl-auto: update
+    properties:
+      hibernate.cache.use_second_level_cache: false
+      hibernate.cache.use_query_cache: false
+      hibernate.generate_statistics: true
+#      hibernate.hbm2ddl.auto: create
+      hibernate.hbm2ddl.auto: update
+  rabbitmq:
+    host: dcmwdevxwiki01
+    port: 5672    
+    username: developer
+    password: abc1234
+  mail:
+    default-encoding: UTF-8
+    host: easycredit-vn.mail.protection.outlook.com
+    username: evnappadmin@easycredit.vn
+    password: '{cipher}AQB6TjJJStjHr8ael18NA4vZTl72qrCEnc+fW/W7nlCTPS5Ae3pt0YjqRpbm38ZVfHEuwRtGnXhjgmkIbSMQrtv0HR8SDzFnPZaK63uI3qKwkC0DBmrvCD5ugO+H7hLQai2u1RENqH9ENmVbdaY/lWmVKK6usgs2grRrFimuc2fsZbcVqMv7aDF72nOZDgB9lNty8o2O5fSBkAJsNFHYlmiR6Uk3053ILgw0gs3Bf/3M3D6jopecMXmeE0xQSIg7KrMWtH95oxQQBjPNDAnZkgyujyN/naz34Q6f6aRGL/BpptMA7lOVA7XDjuGSeYNJo8fwpMwqUcKnCoUX/BdKjvq+e2963fNOCHxnc4dstO0M0gSdKF7e5l5ZFRrUbwh/CKs='
+    port: 25
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+    protocol: smtp
+    test-connection: false       
+  thymeleaf: 
+    check-template-location: true
+    prefix: classpath:/templates/
+    suffix: ".html"
+    mode: HTML5
+    encoding: UTF-8
+    enabled: false    
+
+jackson:
+  deserialization:
+    ACCEPT_EMPTY_STRING_AS_NULL_OBJECT: true
+    ACCEPT_SINGLE_VALUE_AS_ARRAY: true
+    
+swagger:
+  info:
+    title: ENV Finance API
+    version: "v0.1"
+    license: Copyright 2017 ENV Finance. All rights reserved.
+    contact:
+      name: ENV Developer
+      url: http://evn.com
+      email: xxx@email.com
+    description: |
+      This is the very basic prototype for EVN Finance project.
+  
+      ### RESTful
+      It would be nice to use [RESTful](http://en.wikipedia.org/wiki/Representational_state_transfer) standard to design endpoints.
+      Every endpoint (URL) may support one of four different http verbs. GET
+      requests fetch information about an object, POST requests create objects,
+      PUT requests update objects, and finally DELETE requests will delete
+      objects.
+  
+      `But`, since many old browsers together with some http clients (python clients) don't support PUT or DELETE. Of course we can made it easy to
+      fake PUTs and DELETEs. All you have to do is do a POST with _method=PUT or
+      _method=DELETE as a parameter and we will treat it as if you used PUT or
+      DELETE respectively. Another drawback of full RESTful standard is we can make a common request, response structrue, like 'meta', 'data', ...
+  
+      `So` at current version of running system at EVN Finance, we just only use POST, no need to fake anymore, to make it clearly work as PUT and DELETE of RESTful, you should use naming convention like `resource/create`, `resource/delete`.
+      This project has to follow this style.
+      
+      > Small thoughts: The reason to not follow RESTful can't convince me at all :)
+      ### Structure
+  
+      #### The Envelope
+      * `Request`:
+      Every response is contained by an envelope. That is, each response has a
+      predictable set of keys with which you can expect to interact:
+      ```json
+      {
+          "meta": {
+              "uid": "xxxxxxx",
+              "languageCode": "en",
+              "countryCode": "US"
+          },
+          "data": {
+              ...
+          }
+      }
+      ```
+  
+      * `Response`:
+      Every response is contained by an envelope. That is, each response has a
+      predictable set of keys with which you can expect to interact:
+      ```json
+      {
+          "status": 200,
+          "meta": {
+              "uid": "xxxxxxx",
+              "languageCode": "en",
+              "countryCode": "US"
+          },
+          "data": {
+              ...
+          }
+      }
+      ```
+      `uid` should be sent from client request, if not, API will random a key and response in `meta` key.
+  
+      * `Error`:
+      If all goes well, you'll only ever see a HTTP Status with value
+      `200`. However, sometimes things go wrong, and in that case you might see a
+      response like:
+      
+      ```json
+      {
+          "status": 400,
+          "meta": {
+              "uid": "xxxxxxx",
+              "languageCode": "en",
+              "countryCode": "US"
+          },
+          "error": {
+              "code": "HTLERR2000",
+              "type": "VALIDATION",
+              "messageInvalid request parameters,
+              "detailMessage": "Maximum number of adults must be in range of 1-9",
+              "invalidParameters": []
+          }
+      }
+      ```
+  
+      In this case, HTTP Status will be 400, 500, 401, 403, etc.
+      
+      `invalidParameters` is detail fields error in scenario of validation.
+  
+      #### Meta
+      The meta key is used to communicate extra information about the response to
+      the developer
+      
+      #### Status
+      If all goes well, you'll only ever see a code key with value `200 (Success)`, otherwise, it could be `400 (bad request), 500 (internal system error), 401 (Unauthorized), 403 (Forbidden), etc`.
+      This is used for migrating from old version of client, that doesn't support checking HTTPStatus.
+  
+      #### Data
+      The data key is the meat of the response. It may be a list or dictionary,
+      but either way this is where you'll find the data you requested.

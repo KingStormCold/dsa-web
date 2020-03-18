@@ -1,0 +1,85 @@
+logging:
+  file: /var/log/easycredit/ms-dsa-auth-dev.log
+spring:
+  datasource:
+    url: jdbc:postgresql://10.0.27.26:5432/test_dev?characterEncoding=utf8
+    driverClassName: org.postgresql.Driver
+    username: test_dev
+    password: '{cipher}AgAW4aOQKqt6tfH+wHlG+qxPP5JJUvOoPGhBiKKnx7HqKkofyNH/7b/5uwBSxJMRQV/AQRFXQUdFctFfPBeb0fbyHcX4K4r/iFOvvwPED0rf0jAEGRigINS2iJbBjNHFiNPakTgcnEHxjEipoaOiHpHB6jpthDNdz/vwmUfPYa4SVfcSq8Qdxw0jhMoqMfuJazP6IWEEXODL3mSoc7D8KpR7Dd+NO7gKMKO3OGJdNZwcXE2I+WYjNVxQvYjtGpXfFSTjLjov5g4zFyBVMM0PlelCqOLeCPRiw+30bxk0x+DpMlb3HRcCXx9h3gsM87u1krqBnJbmmr5UsEzGhouSqRGyRMPs0Gs8YW9BdjuTkqwcl7Y3YA2/3ZlrTc2nESx8GtMxODfnnt1GwgBiWEY7TN/t/66rYeDLzXar0LIwR7414IlSBKNfuS11rWXO3y6WKEbD4+h3/ihFB18qx7VuOuc2gZ/oUcTngwAbiN1TeZ6CqHWwC4dje5MrLciIngZtwr3chRvx3ymVZV8CaRP1hcol1J4ii6RV4fLlBW6laOMiwrGtbI9t0yU/9UIE/zB3Dsz/RvJuUNg4JZ5RoqJXCyz244fMiXerd2lFX+mRtiYu8z+IQ/BpkBbhgSc6YiPWH9rJvKkajnw7MUFT/OSzCok9uTpVAvO/Y4Eh3y8jw1DSdCRKddiJYbcQfT3wbJqj5UNpGjj1f0TeH7u++QbPDvr6'
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      naming-strategy: org.hibernate.cfg.EJB3NamingStrategy
+#      ddl-auto: create
+      ddl-auto: update
+    properties:
+      hibernate.jdbc.lob.non_contextual_creation: true
+  mail:
+    default-encoding: UTF-8
+    host: easycredit-vn.mail.protection.outlook.com
+    username: evnappadmin@easycredit.vn
+    password: Cuh26629
+    port: 25
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+    protocol: smtp
+    test-connection: false
+endpoints:
+  actuator:
+    sensitive: false
+  shutdown:
+    enabled: true
+    sensitive: true
+  restart:
+    enabled: true
+    sensitive: true
+  refresh:
+    enabled: true
+    sensitive: true
+
+eligible-api:
+    access-token-url: https://10.0.27.30:8095/api/uaa/oauth/token
+    client-id: client_api
+    client-secret: '{cipher}AgAzJLtHHyQuLCmbaG3hoY5PXgb7Hgudw5wpFpk7HLHp2n9i6bUF0Ieq7Mall89MNFGlpRbSqDuvqgTkTj6ybykp8MT+gtMVeDY+aWra3FRiMuABbdqjEKpNshzujUDS/Ap/HsP4wD2jZEGkkctzo6XycXqPviT42pD9gTUcqxNKaCMWP0hhRqNgl3URd0kFOIU6YvWT1ds2JHBL2ikFPtEGacKo9Cw1mOuwIbm0VbeSW6rdRQvv/MCrNG5dm5KhKX8CS/uTZV/BIo+54ATgAQQfp+MjlsQXOfzzRBN/UWIaOVvZEpm8CCrQkDfehTUVRIYQ13ZLMQPGmaUcu3+x9Xmw8er0ZZL+yOYUkzTMTUACDge7L/vTf9Tj/+FsWaGijwbZmQkVoTDrtBPIyJ4Qj0ix4QJF1ZsA6cQCnBaaFKTngG3xCSfkkJR69f/CneXRRk3kTX3m37MW7gFZaImuc9c5lzIc5IdPogCk0uwqlBlCD5FjYsUYQe5gNoh+IYS+XvGimf2Gp1zwTvth1SMBLGiygBN0vFhE1qShculrD6aQsgPJ96tmul8ZnYXPQWEyrn1opKs+UI9Zi0YfB0kQRNc0GcIKisZ/HxpzyMBmaa0nCAzseG9/QD1cYNgSo1os2qUeObn8EECmMbopBKMm06CbeAZ+7SEpXHkr4skSo1Pxmg4TFdlnID5vZ55zxy7AObxxSo+k+srFtE7dOMpaCuAQ'
+    grant-type: client_credentials
+    eligible-check: https://10.0.27.42:18098/v1/eligible/check
+eligible-mail:
+    subject-mail-of-create-password: "[EasyCredit] - Activate your account"
+    subject-mail-of-forget-password: "[EasyCredit] – Reset your password"
+    from-mail: supportcode@easycredit.vn
+    link-mail-create: https://10.0.27.15:5800/auth/user/
+    link-mail-forget: https://10.0.27.15:5800/auth/forgot/
+security:
+  oauth2:
+    client:
+      client-id: clientapp
+      client-secret: '{cipher}AgAer1weMrQJENZL7Fkd0qiOnGPlKj5KN2lhKn6i2IVVAi2kGJioWAOMDwf1rta/WxVKRh9I6NemEdNqNOLNbNpyxDNUjFWGdSGzM90xJ005MI/T0TcJAfuo5Pqy2kjY1EsDwD9SNiOczJNQ8Qk5kggum30KbKSShq7uk6VxPSEJ9wLwrwduDKWmf2iegJW7ZjvkrEYH2r/LwuuJmezsytOANiQ6iR1M/0LXAKDc+TKuUf9MKd/j0Zvo67WMc9cxJGyUk1U6RijnjjtmDUl+4SPx9fbJFrjrMijnG6+arIX/olNBImjRUjbLFj1tVU6A8s1SwOmYXSMVteS4s24OTJMgXKAKqcPAOahH4gYLPp15xGOrvfFe5n0oso9+OBiXlPw4pEgZYwA70imTPf+xYGau2kktQNHZNcpfL8Gkoos6el5nZhetTM3sAlo3a/SQ9JD+H9J2iJK8ShrX5XoI9++zo7j3DF2bkIvpGFbWgXngnyDFBMjuJ7EgoR+JCHq5bp8o23bKBrSJRz3NayrHYmPzfCsQasc5EqotpZ18yY3rIKpWCDBfMShXcVAp3WFdTtWK+XJlGjOqlm2rW9rUqwMVDafLIVf1D7aGgozF8j6RACPk71WxjT2RvY81Bt6WrGkHgieRJBGdXbo4L9TzFHZNZ00zdk7ZUljt2G6gczr++nFA5PUZtVHugIyeDPDIQ26cMsO0ZowJ1ngC1oxnjVQ5'
+    resource:
+      token-info-uri: https://apidev.int.easycredit.vn:9000/oauth/check_token
+      id: eligible-test
+
+javax:
+  net:
+    ssl:
+      trust-store: file:///Program Files/Java/jdk1.8.0_181/jre/lib/security/cacerts
+      trust-store-password: changeit
+eureka:
+  client:
+    enabled: true
+    serviceUrl:
+      defaultZone: https://admin:admin@apidev.int.easycredit.vn:8761/eureka/
+  instance:
+    appname: ms-dsa-auth-dev
+
+server:
+  port: 8080
+  #https
+  ssl:
+    enabled: true
+    key-store: ///D:/Company/InternalTools/Docs/dcmwdevtest02.p12
+    key-store-password: changeit
+    key-store-type: PKCS12
