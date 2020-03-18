@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: ms-dsa-auth-prod
+  cloud:
+    config:
+      uri: https://admin:Rj4UTQXf@dcmwcfg01:8888
+
+management:
+  security:
+    enabled: true
+security:
+  basic:
+    enabled: true
+  user:
+    name: admin
+    password: admin
+      

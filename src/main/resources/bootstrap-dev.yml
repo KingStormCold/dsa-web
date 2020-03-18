@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: ms-dsa-auth-dev
+  cloud:
+    config:
+      uri: https://admin:admin@apidev.int.easycredit.vn:8888
+      
+management:
+  security:
+    enabled: true
+security:
+  basic:
+    enabled: true
+  user:
+    name: admin
+    password: admin
+      
